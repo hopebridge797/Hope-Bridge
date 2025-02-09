@@ -3,31 +3,38 @@
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: [Hope Bridge]
 
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Member 1: [Meenakshi Saril] - [SIMAT]
+- Member 2: [Aysha Misha al K P] - [SIMAT]
+- Member 3: [Nandhana K] - [SIMAT]
 
 ### Hosted Project Link
 [mention your project hosted project link here]
 
 ### Project Description
-[2-3 lines about what your project does]
+[It is actually a user friendly prototype which a person can access when they need financial support for their medical cases or others so if the user can login and enter their details while the donar checks the details and verify whether it is genuine or not]
 
 ### The Problem statement
-[What ridiculous problem are you solving?]
+[Many individuals face financial hardship due to medical emergencies or other critical situations but struggle to find a trustworthy platform to seek help. At the same time, potential donors often hesitate to contribute due to concerns about the authenticity of requests. Hope Bridge aims to bridge this gap by providing a user-friendly, transparent, and secure platform where individuals can request financial support, while donors can review, verify, and contribute to genuine cases with confidence.]
 
 ### The Solution
-[How are you solving it? Keep it fun!]
+[Hope Bridge is a secure, user-friendly platform that connects individuals in need of financial support with verified donors. The solution involves:
+
+Registration & Verification: Users submit details for case verification; donors register to contribute.
+Case Submission & Authentication: Requests are reviewed for authenticity using a verification system.
+Donor Transparency: Donors access detailed case information and verified status.
+Secure Payments: Donations are processed via trusted payment gateways with milestone-based disbursements.
+Real-time Tracking: Beneficiaries and donors receive updates on fund progress.
+Community Engagement: Social sharing and success stories encourage trust and participation.]
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
+- [html,,python,javascript]
+- [css,flask]
 - [Libraries used]
 - [Tools used]
 
@@ -92,9 +99,9 @@ For Hardware:
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- [Meenakshi 1]: [front end design]
+- [Nandhana 2]: [ideas]
+- [Aysha mishal 3]: [backend design]
 
 ---
 Made with ❤️ at TinkerHub
