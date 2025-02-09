@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Registration</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="container">
+            <h2>Donor Registration</h2>
+            <!-- Donor Details Form -->
+            <div class="donor-details">
+                <h3>Personal Details</h3>
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="number" id="age" placeholder="Age" required min="18">
+                <input type="tel" id="contact" placeholder="Contact Number" required maxlength="10">
+                <input type="email" id="email" placeholder="Email" required>
+                <textarea id="address" placeholder="Enter Address" required></textarea>
+            </div>
+
+            <!-- Blood Donation Scheduling Form -->
+            <div class="donation-details">
+                <h3>Blood Donation Scheduling</h3>
+                <input type="date" id="donationDate" required>
+                <input type="time" id="donationTime" required>
+            </div>
+
+            <!-- Financial Donation Form -->
+            <div class="financial-details">
+                <h3>Financial Donation</h3>
+                <input type="number" id="donationAmount" placeholder="Donation Amount" required>
+                <select id="paymentMode" required>
+                    <option value="">Select Payment Mode</option>
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="Debit Card">Debit Card</option>
+                    <option value="PayPal">PayPal</option>
+                    <option value="Cash">Cash</option>
+                </select>
+            </div>
+
+            <button id="submitBtn">Submit</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .about-btn {
+            background: #0b2038;
+            color: white;
+        }
+
+        .about-btn:hover {
+            background: #1d4267;
+        }
+
+        .donate-btn {
+            background: #041b09;
+            color: white;
+            display: none; /* Initially hidden */
+        }
+
+        .donate-btn:hover {
+            background: #218838;
+        }
+
+        /* Hidden User Details Section */
+        .user-details {
+            display: none;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .close-btn {
+            background: #dc3545;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .close-btn:hover {
+            background: #c82333;
+        }
+
+        .user-details img {
+            width: 200px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Donate to Help</h1>
+        <p>Click below to know about the person in need.</p>
+        <button class="btn about-btn" onclick="showDetails()">About</button>
+    </div>
+
+    <!-- User Details Section (Initially Hidden) -->
+    <div class="user-details" id="userDetails">
+        <h2>John Doe</h2>
+        <img src="user_image.jpg" alt="User in need">
+        <p><strong>Age:</strong> 30</p>
+        <p><strong>Situation:</strong> John was affected by a recent natural disaster and needs financial support for medical bills, housing, and daily necessities.</p>
+        <p><strong>Bank Details:</strong> 1234567890 (Bank ABC)</p>
+        <p><strong>Location:</strong> New York, USA</p>
+        <p><strong>Funds Needed:</strong> $5000</p>
+
+        <button class="close-btn" onclick="hideDetails()">Close</button>
+
+        <!-- Donate Button at the Bottom -->
+         <a href="{{ url_for('payment') }}">
+        <button class="btn donate-btn" id="donateBtn" >Donate Now</button>
+    </a>
+        
+
+        
+    </div>
+
+    <script>
+        function showDetails() {
+            document.getElementById("userDetails").style.display = "block";
+            document.getElementById("donateBtn").style.display = "inline-block"; // Show donate button
+        }
+
+        function hideDetails() {
+            document.getElementById("userDetails").style.display = "none";
+            document.getElementById("donateBtn").style.display = "none"; // Hide donate button
+        }
+
+        function donate() {
+            alert("Redirecting to donation page...");
+            window.location.href = "donation_page.html"; // Replace with actual donation page URL
+        }
+    </script>
+
+</body>
+</html>

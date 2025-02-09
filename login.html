@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hope Bridge - Donate for a Better Tomorrow</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #2c3e50;
+      padding: 10px 20px;
+    }
+
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar .logo img {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .navbar h1 {
+      color: white;
+    }
+
+    .nav-links {
+      list-style-type: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li {
+      display: inline;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .navbar .login-bar a {
+      color: white;
+      background-color: #3498db;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: #dfd096;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      color: #34495e;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #34495e;
+      margin-bottom: 20px;
+    }
+
+    .browse-button {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .browse-button:hover {
+      background-color: #218838;
+    }
+
+    /* Login Section */
+    .login-section {
+      background-color: white;
+      padding: 40px;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .login-section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .login-section input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .login-btn {
+      background-color: #022034;
+      color: white;
+      padding: 12px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .login-btn:hover {
+      background-color: #2980b9;
+    }
+
+    .login-section p {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    .login-section a {
+      color: #3498db;
+    }
+
+    /* Footer styling */
+    footer {
+      background-color: #34495e;
+      text-align: center;
+      padding: 20px 0;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src=" "alt="Hope Bridge Logo">
+        <h1>Hope Bridge</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#donate">Donate</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="login-bar">
+        <a href="login.html">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Welcome to Hope Bridge</h2>
+      <p>Your contribution can help bridge the gap for those in need. Together, we can make the world a better place.</p>
+      <a href="{{ url_for('index') }}">
+        <button class="browse-button">Browse Us</button>
+      </a>
+      </div>
+  </section>
+
+  <!-- Login Section -->
+  <section class="login-section">
+    <h2>Login to Your Account</h2>
+    <form action="/login" method="POST">
+      <input type="text" name="username" placeholder="Enter your username" required>
+      <input type="password" name="password" placeholder="Enter your password" required>
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+    <p>Don't have an account? <a href="register.html">Sign up here</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Hope Bridge. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

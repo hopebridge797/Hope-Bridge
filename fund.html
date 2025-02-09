@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundraising Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .submit-btn {
+      background: #010c18;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .submit-btn:hover {
+      background: #010d1ab1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Start a Fundraiser</h2>
+    <form id="fundraisingForm">
+      <input type="text" id="fundraiserName" placeholder="Your Name" required>
+      <input type="text" id="causeTitle" placeholder="Fundraiser Title" required>
+      <textarea id="description" placeholder="Describe why you're fundraising" required></textarea>
+      <input type="number" id="amountNeeded" placeholder="Amount Needed ($)" required>
+      <input type="file" id="fundraiserImage" accept="image/*" required>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('fundraisingForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      let fundraiserName = document.getElementById('fundraiserName').value;
+      let causeTitle = document.getElementById('causeTitle').value;
+      let description = document.getElementById('description').value;
+      let amountNeeded = document.getElementById('amountNeeded').value;
+      let fundraiserImage = document.getElementById('fundraiserImage').files[0];
+
+      let reader = new FileReader();
+      reader.onload = function() {
+        let fundraiserData = {
+          name: fundraiserName,
+          title: causeTitle,
+          description: description,
+          amount: amountNeeded,
+          image: reader.result
+        };
+
+        let existingFundraisers = JSON.parse(localStorage.getItem('fundraisers')) || [];
+        existingFundraisers.push(fundraiserData);
+        localStorage.setItem('fundraisers', JSON.stringify(existingFundraisers));
+
+        alert("Fundraiser submitted successfully!");
+        document.getElementById('fundraisingForm').reset();
+      };
+      reader.readAsDataURL(fundraiserImage);
+    });
+  </script>
+</body>
+</html>

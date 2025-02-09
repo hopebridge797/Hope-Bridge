@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Verification and Payment</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <div class="container">
+    <h1>User Verification and Payment</h1>
+
+    <div class="section">
+      <h2>Step 1: User Details</h2>
+      <form id="userDetailsForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="adharCard">Aadhar Card Number:</label>
+        <input type="text" id="adharCard" name="adharCard" required>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="section">
+      <h2>Step 2: Camera Verification</h2>
+      <video id="video" width="320" height="240" autoplay></video>
+      <button id="startCamera" onclick="startCamera()">Start Camera</button>
+      <button id="capture" onclick="captureImage()">Capture</button>
+      <canvas id="canvas" width="320" height="240"></canvas>
+    </div>
+
+    <div class="section">
+      <h2>Step 3: Hospital Verification</h2>
+      <label for="hospitalEmail">Hospital Email:</label>
+      <input type="email" id="hospitalEmail" required>
+
+      <label for="hospitalLocation">Hospital Location:</label>
+      <input type="text" id="hospitalLocation" required>
+
+      <h3>QR Code for Payment</h3>
+      <div id="qrCodeContainer">
+        <p id="qrCodeText"></p>
+      </div>
+
+      <button onclick="generateQRCode()">Generate QR Code</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

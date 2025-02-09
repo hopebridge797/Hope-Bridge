@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donation Details - Help Make a Difference</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    .main-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1000px;
+      margin: auto;
+    }
+    /* Donation Box */
+    .donation-box {
+      width: 60%;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .donation-box img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 8px;
+    }
+    .donation-box h2 {
+      color: #031327;
+    }
+    .donation-box p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.5;
+    }
+    .donate-btn {
+      background-color: #28a745;
+      color: white;
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .donate-btn:hover {
+      background-color: #218838;
+    }
+    .details {
+      font-size: 18px;
+      color: #333;
+    }
+
+    /* Fundraising Button Box (Right Corner) */
+    .fundraising-box {
+      width: 30%;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .fundraising-btn {
+      background-color: #03101f;
+      color: white;
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .fundraising-btn:hover {
+      background-color: #050c15;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-container">
+    <!-- Donation Box (Left Side) -->
+    <div class="donation-box">
+      <h1>Donate to Help</h1>
+      <img src="user_image.jpg" alt="User in need">
+      <h2>John Doe</h2>
+      <p><strong>Age:</strong> 30</p>
+      <p><strong>Situation:</strong> John was affected by a recent natural disaster and needs financial support for medical bills, housing, and daily necessities.</p>
+
+      <div class="details">
+        <p><strong>Bank Details:</strong> John’s bank account number is 1234567890 (Bank ABC).</p>
+        <p><strong>Location:</strong> New York, USA</p>
+        <p><strong>Funds Needed:</strong> $5000 for medical expenses and recovery.</p>
+      </div>
+
+      <!-- Donate Button -->........
+       <a href="{{ url_for('userdetails') }}">
+      <button class="donate-btn"  >About</button>
+    </a>
+
+
+
+    </div>
+
+    <!-- Fundraising Button (Right Corner) -->
+    <div class="fundraising-box">
+      <h3>Start a Fundraiser</h3>
+      <a href="{{ url_for('fund') }}">
+        <button class="fundraising-btn">Add Fundraising Details</button>
+    </a>
+    </div>
+  </div>
+
+  <script>
+    function donate() {
+      alert("Redirecting to donation page...");
+      window.location.href = "https://www.paymentgateway.com/donate"; // Replace with actual donation link
+    }
+
+    function startFundraiser() {
+      alert("Redirecting to Fundraising Form...");
+      window.location.href = "fundraising_form.html"; // Replace with your actual fundraising form page
+    }
+  </script>
+
+</body>
+</html>

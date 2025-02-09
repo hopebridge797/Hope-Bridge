@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .paypal-btn {
+            background: #937a14;
+            color: white;
+        }
+
+        .paypal-btn:hover {
+            background: #78630f;
+        }
+
+        .creditcard-btn {
+            background: #021327;
+            color: white;
+        }
+
+        .creditcard-btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Select Payment Method</h1>
+        <p>Please choose one of the following payment methods to proceed with your donation.</p>
+
+        <!-- Payment Options -->
+
+        <button class="btn paypal-btn" onclick="payWithPayPal()">Pay with PayPal</button>
+        <!-- <button class="btn creditcard-btn" onclick="payWithCreditCard()">Pay with Credit Card</button>      -->
+        
+            <a href="{{ url_for('form') }}">
+            <button class="btn payment-using-credicard" id="payment-using-credicard" >Pay with Credit Card</button>
+        </a>
+    </div>
+
+    <script>
+        function payWithPayPal() {
+            // Redirect to PayPal payment page (You can replace with actual PayPal URL)
+            window.location.href = "https://www.paypal.com/donate?hosted_button_id=YOUR_BUTTON_ID"; // Replace with your PayPal donation URL
+        }
+
+        function payWithCreditCard() {
+            // Redirect to Credit Card payment page (You can replace with actual payment URL)
+            window.location.href = "https://www.yourpaymentgateway.com/payment"; // Replace with your Credit Card payment gateway URL
+        }
+    </script>
+
+</body>
+</html>

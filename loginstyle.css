@@ -1,0 +1,18 @@
+.login-bar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .login-bar a {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .login-bar a:hover {
+    background-color: #218838;
+  }
+  

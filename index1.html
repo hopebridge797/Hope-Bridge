@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support and Donations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- User Interface (Left side) -->
+    <div class="user-interface">
+      <h2>Request Financial Support & Donations</h2>
+      <p>If you need financial support or want to request a blood donation, fill out the form below:</p>
+      <form id="userForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" required>
+        <label for="support">Type of Support:</label>
+        <select id="support" required>
+          <option value="financial">Financial Support</option>
+          <option value="blood">Blood Donation</option>
+        </select>
+        <label for="details">Additional Details:</label>
+        <textarea id="details" rows="4" required></textarea>
+        <button type="submit">Submit Request</button>
+      </form>
+    </div>
+    <!-- Donor Interface (Right side) -->
+    <div class="donor-interface">
+      <h2>Become a Donor</h2>
+      <p>If you are willing to donate blood or contribute financially, please fill out the form below:</p>
+      <form id="donorForm">
+        <label for="donorName">Your Name:</label>
+        <input type="text" id="donorName" required>
+        <label for="donationType">Type of Donation:</label>
+        <select id="donationType" required>
+          <option value="blood">Blood Donation</option>
+          <option value="financial">Financial Donation</option>
+        </select>
+        <label for="donorDetails">Additional Details:</label>
+        <textarea id="donorDetails" rows="4" required></textarea>
+        <button type="submit">Submit Donation</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

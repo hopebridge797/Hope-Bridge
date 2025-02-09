@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Successful</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #372306;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #666504;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #5e440f;
+        }
+
+        .success-icon {
+            font-size: 50px;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="success-icon">✔️</div>
+        <h1>Donation Successful!</h1>
+        <p>Thank you for your generosity! Your donation has been successfully processed.</p>
+        <p>We appreciate your support in making a difference in someone's life.</p>
+
+        <!-- Redirect to home or other page -->
+        <button class="btn" onclick="redirectToHome()">Return to Home</button>
+    </div>
+
+    <script>
+        function redirectToHome() {
+            window.location.href = "index.html";  // Replace with the homepage or relevant page URL
+        }
+    </script>
+
+</body>
+</html>
